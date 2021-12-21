@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Text Taunts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @text_taunts.each do |text_taunt| %>
+      <tr>
+        <td><%= text_taunt.description %></td>
+        <td><%= link_to 'Show', text_taunt %></td>
+        <td><%= link_to 'Edit', edit_text_taunt_path(text_taunt) %></td>
+        <td><%= link_to 'Destroy', text_taunt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text Taunt', new_text_taunt_path %>

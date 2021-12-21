@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wagers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Challenge</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wagers.each do |wager| %>
+      <tr>
+        <td><%= wager.challenge %></td>
+        <td><%= wager.description %></td>
+        <td><%= link_to 'Show', wager %></td>
+        <td><%= link_to 'Edit', edit_wager_path(wager) %></td>
+        <td><%= link_to 'Destroy', wager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wager', new_wager_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Available taunt:</strong>
+  <%= @given_taunt.available_taunt %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @given_taunt.profile %>
+</p>
+
+<%= link_to 'Edit', edit_given_taunt_path(@given_taunt) %> |
+<%= link_to 'Back', given_taunts_path %>

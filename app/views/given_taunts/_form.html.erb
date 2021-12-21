@@ -1,0 +1,27 @@
+<%= form_with(model: given_taunt, local: true) do |form| %>
+  <% if given_taunt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(given_taunt.errors.count, "error") %> prohibited this given_taunt from being saved:</h2>
+
+      <ul>
+      <% given_taunt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :available_taunt_id %>
+    <%= form.text_field :available_taunt_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profile_id %>
+    <%= form.text_field :profile_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

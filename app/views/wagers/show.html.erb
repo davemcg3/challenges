@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Challenge:</strong>
+  <%= @wager.challenge %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wager.description %>
+</p>
+
+<%= link_to 'Edit', edit_wager_path(@wager) %> |
+<%= link_to 'Back', wagers_path %>

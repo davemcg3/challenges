@@ -1,0 +1,2 @@
+module AvailableTauntsHelper
+end

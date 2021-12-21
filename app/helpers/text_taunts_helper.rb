@@ -1,0 +1,2 @@
+module TextTauntsHelper
+end

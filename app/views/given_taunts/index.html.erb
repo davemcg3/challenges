@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Given Taunts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Available taunt</th>
+      <th>Profile</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @given_taunts.each do |given_taunt| %>
+      <tr>
+        <td><%= given_taunt.available_taunt %></td>
+        <td><%= given_taunt.profile %></td>
+        <td><%= link_to 'Show', given_taunt %></td>
+        <td><%= link_to 'Edit', edit_given_taunt_path(given_taunt) %></td>
+        <td><%= link_to 'Destroy', given_taunt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Given Taunt', new_given_taunt_path %>

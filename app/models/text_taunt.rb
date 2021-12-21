@@ -1,0 +1,2 @@
+class TextTaunt < ApplicationRecord
+end
